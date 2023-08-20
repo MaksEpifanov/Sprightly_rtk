@@ -1,0 +1,11 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+yarn build ||
+(
+   echo 'Next build failed: View the errors above to see why'
+   false;
+)
+
+
+echo '✅ You win this time... I am push this now. ✅'

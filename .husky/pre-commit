@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+npx lint-staged || (
+        echo '😤 Something went wrong! 😤
+                ESLint Check Failed.'
+        false;
+)
+
+echo '🤔... Alright... Code looks good to me... Trying to build now. 🤔'
